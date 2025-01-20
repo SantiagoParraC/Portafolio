@@ -1,12 +1,127 @@
-header{
-    background-color: aquamarine;
-    height: 150vh;
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #00b4d8;
+    --background-color: #f0f8ff;
+    --text-color: #03045e;
 }
-a{
-    color: black;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
-   /*MEDIAS 320-800-1200*/
-.tittle{
-    height: 200vh;
-    background-color: aqua;
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#title img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.skills, .hobbies, .education {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.skills div, .hobbies div, .education div {
+    text-align: center;
+    margin: 10px;
+}
+
+.projects img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #title {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills, .hobbies, .education {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills div, .hobbies div, .education div {
+        margin: 20px 0;
+    }
 }
